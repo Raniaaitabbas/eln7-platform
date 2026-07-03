@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import "./App.css";
 import Login from "./Login";
-import Dashboard from "./Dashboard"; // On importe la nouvelle page
+import Dashboard from "./Dashboard";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [userLevel, setUserLevel] = useState("BAC"); // Permet de retenir si l'élève est en BEM ou BAC
+  const [userLevel, setUserLevel] = useState("BAC");
 
-  // Fonction appelée quand l'élève réussit à s'inscrire ou se connecter
   const handleLoginSuccess = (level) => {
     setUserLevel(level);
     setCurrentPage("dashboard");
   };
 
-  // Si on est sur le Dashboard
   if (currentPage === "dashboard") {
     return (
       <Dashboard
@@ -23,7 +21,6 @@ function App() {
     );
   }
 
-  // Si on est sur le Login
   if (currentPage === "login") {
     return (
       <Login
@@ -33,7 +30,6 @@ function App() {
     );
   }
 
-  // Sinon, page d'accueil
   return (
     <div className="landing-page">
       <nav className="navbar">
@@ -70,10 +66,7 @@ function App() {
           <h2>À propos de l'enseignant</h2>
           <p className="about-text" dir="rtl">
             أنا حمزة، حاصل على شهادة ماستر 2 في الإلكترونيك، ولدي عدة سنوات من
-            الخبرة. أقدم لكم هذه المنصة الموجهة لتلاميذ شهادة التعليم المتوسط
-            (BEM) وشهادة البكالوريا. تهدف هذه المنصة إلى مرافقتهم ودعمهم خلال
-            تحضيرهم لهذين الامتحانين، من خلال فيديوهات، ملخصات، ومواضيع تساعدهم
-            على النجاح بشكل أفضل.
+            الخبرة...
           </p>
         </div>
       </section>
@@ -92,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // <-- TON FICHIER DOIT FINIR ICI !

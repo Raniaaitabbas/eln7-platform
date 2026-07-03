@@ -447,3 +447,16 @@ select.login-input {
   border-color: #f2a33a;
   box-shadow: 0 4px 15px rgba(242, 163, 58, 0.3);
 }
+.video-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0000; /* Rouge YouTube */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.video-link:hover {
+  background-color: #cc0000; /* Rouge plus foncé au survol */
+}
